@@ -1,3 +1,0 @@
-# Model weights can be large; download at install time
-models/opencv-face/*.caffemodel
-models/opencv-face/*.pb
