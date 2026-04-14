@@ -1,7 +1,7 @@
 ---
-name: IDOCR
-slug: idocr
-version: 1.0.2
+name: id-ocr
+slug: id-ocr
+version: 1.0.3
 description: Extract a person’s identity fields from an uploaded ID document image, including transliterated English name and normalized dates.
 ---
 

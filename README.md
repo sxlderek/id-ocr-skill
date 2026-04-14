@@ -1,6 +1,6 @@
 # idocr-skill
 
-OpenClaw skill: **IDOCR** — Extract a person’s identity fields from an uploaded ID document image, including transliterated English name and normalized dates.
+OpenClaw skill: **id-ocr** — Extract a person’s identity fields from an uploaded ID document image, including transliterated English name and normalized dates.
 
 ## What it returns (exact fields)
 
@@ -16,4 +16,4 @@ The skill is designed to avoid emitting unnecessary sensitive data (ID number, a
 
 ## Files
 
-- `IDOCR/SKILL.md` — skill instructions
+- `id-ocr/SKILL.md` — skill instructions
