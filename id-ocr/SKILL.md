@@ -51,3 +51,33 @@ Name (EN): First Last
 DOB: YYYY-MM-DD
 Expiry: YYYY-MM-DD | N/A | [unclear]
 Issuing country: ...
+
+## Optional: ID Photo Extraction (OpenCV)
+
+If you need to extract the **ID photo rectangle** (not just a headshot crop), you can use the bundled helper scripts under `scripts/`.
+
+### Requirements (WSL/Ubuntu)
+
+```bash
+sudo apt update
+sudo apt install -y python3-opencv python3-numpy
+```
+
+### Model weights
+
+Download OpenCV DNN face detector weights into:
+
+`models/opencv-face/`
+
+```bash
+curl -L -o models/opencv-face/deploy.prototxt \
+  https://raw.githubusercontent.com/opencv/opencv/master/samples/dnn/face_detector/deploy.prototxt
+
+curl -L -o models/opencv-face/res10_300x300_ssd_iter_140000_fp16.caffemodel \
+  https://raw.githubusercontent.com/opencv/opencv_3rdparty/dnn_samples_face_detector_20180205_fp16/res10_300x300_ssd_iter_140000_fp16.caffemodel
+```
+
+### Scripts
+
+- `scripts/crop_headshot_opencv_dnn.py` — detect face and produce a padded headshot crop (hair-to-chin style).
+- `scripts/crop_id_photo_opencv.py` — attempt to crop the **ID photo rectangle**; falls back to a conservative face-based rectangle if border detection fails.
